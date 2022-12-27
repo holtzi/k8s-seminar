@@ -16,23 +16,23 @@ spec:
     metadata:
       labels:
         tier: frontend
-  spec:
-  containers:
-  - name: nginx-container
-    volumeMounts:
-      - mountPath: /storage
-        name: my-volume
-    image: nginx:latest
-    ports:
-    - containerPort: 80
-  - name: springapp
-    volumeMounts:
-      - mountPath: /storage
-        name: my-volume
-    image: yanivomc/spring-music:latest
-    ports:
-    - containerPort: 8080
-  volumes:
-    - name: my-volume
-      hostPath:
-        path: /tmp/data
+    spec:
+      containers:
+      - name: nginx-container
+        volumeMounts:
+          - mountPath: /storage
+            name: my-volume
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+      - name: springapp
+        volumeMounts:
+          - mountPath: /storage
+            name: my-volume
+        image: yanivomc/spring-music:latest
+        ports:
+        - containerPort: 8080
+      volumes:
+        - name: my-volume
+          hostPath:
+            path: /tmp/data
