@@ -14,10 +14,9 @@ spec:
    image: yanivomc/spring-music:latest
    volumeMounts:
     - mountPath: /storage
-      name: app-storage
-   
-  volumes:
-  - name: app-storage
-    hostPath:
+      name: app-storage  
+ volumes:
+ - name: app-storage
+   hostPath:
       # directory location on host
-    path: /tmp/files
+   path: /tmp/files
