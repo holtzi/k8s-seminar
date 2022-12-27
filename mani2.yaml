@@ -20,4 +20,4 @@ spec:
   - name: app-storage
     hostPath:
       # directory location on host
-      path: /tmp/files
+    path: /tmp/files
