@@ -9,7 +9,6 @@ spec:
    volumeMounts:
     - mountPath: /storage
       name: app-storage
-   
  - name: app2
    image: yanivomc/spring-music:latest
    volumeMounts:
