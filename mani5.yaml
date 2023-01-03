@@ -38,7 +38,7 @@ spec:
                   values:
                   - spring-music
             topologyKey: topology.kubernetes.io/zone
-          nodeAffinity:
+        nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
