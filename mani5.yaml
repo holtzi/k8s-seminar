@@ -63,6 +63,11 @@ spec:
             values:
             - eu-west-1b
             - eu-west-1c
+        - matchExpressions:
+          - key: env
+            operator: In
+            values:
+            - prod
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
