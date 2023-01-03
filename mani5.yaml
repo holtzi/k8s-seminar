@@ -38,6 +38,14 @@ spec:
                   values:
                   - spring-music
             topologyKey: topology.kubernetes.io/zone
+          nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: env
+                operator: In
+                values:
+                - prod
       containers:
       - name: spring-music
         image: yanivomc/spring-music:latest
@@ -63,11 +71,6 @@ spec:
             values:
             - eu-west-1b
             - eu-west-1c
-        - matchExpressions:
-          - key: env
-            operator: In
-            values:
-            - prod
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
