@@ -6,7 +6,7 @@ metadata:
     app: spring-music
     tier: frontend
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: spring-music
@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: spring-music
-        image: yanivomc/spring-music:latest
+        image: nginx:latest
